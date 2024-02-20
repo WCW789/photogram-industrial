@@ -24,6 +24,8 @@
   </div>
 </div>
 
-<% @user.liked_photos.each do |photo| %>
-  <%= render "photos/photo", photo: photo %>
-<% end %>
+<ul>
+  <% @user.feed.each do |photo| %>
+    <%= render "photos/photo", photo: photo %>
+  <% end %>
+</ul>

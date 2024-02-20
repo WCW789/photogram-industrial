@@ -24,6 +24,10 @@
   </div>
 </div>
 
-<% @user.liked_photos.each do |photo| %>
-  <%= render "photos/photo", photo: photo %>
-<% end %>
+<ul class="list-group">
+<% @user.leaders.each do |leader| %>
+  <li class="list-group-item">
+    <%= leader.username %>
+  </li>
+ <% end %>
+</ul>
