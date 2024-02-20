@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   resources :likes
   resources :photos
 
-  get "/:username" => "users#show", as: :user
+  get ":username" => "users#show", as: :user
+  get ":username/liked" => "users#liked", as: :liked
 end
