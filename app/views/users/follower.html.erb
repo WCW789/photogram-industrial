@@ -24,8 +24,10 @@
   </div>
 </div>
 
-<ul>
-  <% @user.own_photos.each do |photo| %>
-    <%= render "photos/photo", photo: photo %>
-  <% end %>
+<ul class="list-group">
+<% @user.followers.each do |follower| %>
+  <li class="list-group-item">
+    <%= follower.username %>
+  </li>
+ <% end %>
 </ul>
